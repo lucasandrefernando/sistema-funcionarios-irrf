@@ -1,0 +1,79 @@
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  /* flex-wrap garante que o botão caia para a linha de baixo se não couber */
+  flex-wrap: wrap;
+}
+
+.filtros {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.input {
+  padding: 9px 14px;
+  border: 1px solid #ccd5de;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  /* flex: 1 faz os inputs ocuparem o espaço disponível sem overflow */
+  flex: 1;
+  min-width: 0;
+  outline: none;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #1a3a5c;
+  /* anel de foco sutil — acessibilidade + visual */
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.12);
+}
+
+.input::placeholder {
+  color: #aab;
+}
+
+.btnNovo {
+  padding: 9px 20px;
+  background: #1a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(26, 58, 92, 0.25);
+}
+
+.btnNovo:hover {
+  background: #14304d;
+  box-shadow: 0 4px 10px rgba(26, 58, 92, 0.3);
+}
+
+.btnNovo:active {
+  transform: scale(0.97);
+}
+
+/* mobile: empilha filtros e botão verticalmente */
+@media (max-width: 600px) {
+  .barra {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filtros {
+    flex-direction: column;
+  }
+  .btnNovo {
+    width: 100%;
+    padding: 11px;
+    text-align: center;
+  }
+}
