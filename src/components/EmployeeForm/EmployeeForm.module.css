@@ -1,0 +1,163 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a3a5c;
+  margin: 0 0 4px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #edf0f4;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input {
+  padding: 9px 13px;
+  border: 1px solid #ccd5de;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  background: #fff;
+  color: #333;
+}
+
+.input:focus {
+  border-color: #1a3a5c;
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.1);
+}
+
+.inputErro {
+  border-color: #e74c3c;
+  background: #fff8f8;
+}
+
+.erro {
+  font-size: 0.78rem;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* três campos numéricos lado a lado no desktop */
+.linha2 {
+  display: flex;
+  gap: 12px;
+}
+
+/* no mobile empilha para não ficar apertado */
+@media (max-width: 520px) {
+  .linha2 {
+    flex-direction: column;
+  }
+}
+
+/* área de preview dos valores calculados automaticamente */
+.calculados {
+  display: flex;
+  gap: 0;
+  background: #f0f6ff;
+  border-radius: 6px;
+  border-left: 3px solid #1a3a5c;
+  overflow: hidden;
+}
+
+.itemCalculado {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 20px;
+  flex: 1;
+}
+
+.itemCalculado:first-child {
+  border-right: 1px solid #dce8f5;
+}
+
+.labelCalc {
+  font-size: 0.72rem;
+  color: #778;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.valorCalc {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1a3a5c;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0f4;
+}
+
+.btnCancelar,
+.btnSalvar {
+  padding: 9px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btnCancelar:active,
+.btnSalvar:active {
+  transform: scale(0.97);
+}
+
+.btnCancelar {
+  background: #edf0f4;
+  color: #555;
+}
+
+.btnCancelar:hover {
+  background: #dce2ea;
+}
+
+.btnSalvar {
+  background: #1a3a5c;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(26, 58, 92, 0.25);
+}
+
+.btnSalvar:hover {
+  background: #14304d;
+}
+
+/* no mobile os botões ocupam toda a largura */
+@media (max-width: 520px) {
+  .botoes {
+    flex-direction: column-reverse;
+  }
+  .btnCancelar,
+  .btnSalvar {
+    width: 100%;
+    text-align: center;
+    padding: 11px;
+  }
+}
