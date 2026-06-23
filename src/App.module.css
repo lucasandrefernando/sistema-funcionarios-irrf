@@ -22,8 +22,8 @@
 /* painel lateral desliza da direita no desktop */
 .painel {
   background: #fff;
-  width: 480px;
-  max-width: 100vw;
+  width: 600px;
+  max-width: calc(100vw - 32px);
   height: 100vh;
   overflow-y: auto;
   padding: 32px 28px;
