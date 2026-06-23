@@ -1,0 +1,196 @@
+/* ── TABELA DESKTOP ─────────────────────────────────────────── */
+
+.container {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  /* scroll suave no iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  /* min-width força o scroll horizontal em vez de comprimir as colunas */
+  min-width: 780px;
+}
+
+.tabela thead th {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2c5282 100%);
+  color: #fff;
+  text-align: left;
+  padding: 13px 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tabela thead th:first-child { border-radius: 8px 0 0 0; }
+.tabela thead th:last-child  { border-radius: 0 8px 0 0; }
+
+.tabela tbody tr {
+  border-bottom: 1px solid #edf0f4;
+  transition: background 0.15s;
+}
+
+/* zebra striping — facilita leitura de tabelas com muitas linhas */
+.tabela tbody tr:nth-child(even) { background: #f8fafb; }
+.tabela tbody tr:hover           { background: #ebf0f7; }
+
+.tabela td {
+  padding: 11px 16px;
+  color: #444;
+  white-space: nowrap;
+}
+
+/* nome pode quebrar linha se for longo */
+.tabela td:first-child {
+  white-space: normal;
+  font-weight: 500;
+  color: #222;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btnEditar,
+.btnExcluir {
+  padding: 5px 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.01em;
+}
+
+.btnEditar:active,
+.btnExcluir:active { transform: scale(0.95); }
+
+.btnEditar { background: #1a3a5c; color: #fff; }
+.btnEditar:hover { background: #14304d; }
+
+.btnExcluir { background: #e74c3c; color: #fff; }
+.btnExcluir:hover { background: #c0392b; }
+
+.vazio {
+  text-align: center;
+  padding: 72px 24px;
+  color: #aaa;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  line-height: 2;
+}
+
+/* ── CARDS MOBILE ───────────────────────────────────────────── */
+
+/* a lista de cards fica escondida no desktop */
+.listaCards {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 4px solid #1a3a5c;
+}
+
+.cardNome {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a3a5c;
+}
+
+.cardCpf {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: -6px;
+}
+
+/* grade 2 colunas para os valores */
+.cardGrade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* destaque ocupa as duas colunas */
+.cardItemDestaque {
+  grid-column: 1 / -1;
+  background: #f0f6ff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  border-left: 3px solid #1a3a5c;
+}
+
+.cardLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #999;
+  font-weight: 700;
+}
+
+.cardValor {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cardValorDestaque {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1a3a5c;
+}
+
+.cardAcoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid #edf0f4;
+}
+
+.cardAcoes .btnEditar,
+.cardAcoes .btnExcluir {
+  flex: 1;
+  padding: 9px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ── BREAKPOINT: no mobile mostra cards, esconde tabela ─────── */
+@media (max-width: 720px) {
+  .container {
+    display: none;
+  }
+  .listaCards {
+    display: flex;
+  }
+}
