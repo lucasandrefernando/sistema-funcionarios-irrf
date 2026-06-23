@@ -62,10 +62,20 @@
   gap: 12px;
 }
 
+.linha2 .label {
+  min-height: 2.1rem;
+  display: flex;
+  align-items: flex-end;
+}
+
 /* no mobile empilha para não ficar apertado */
 @media (max-width: 520px) {
   .linha2 {
     flex-direction: column;
+  }
+
+  .linha2 .label {
+    min-height: 0;
   }
 }
 
