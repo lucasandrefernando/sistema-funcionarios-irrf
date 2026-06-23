@@ -1,0 +1,76 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gradiente suave igual ao header do layout — mantém identidade visual */
+  background: linear-gradient(160deg, #f0f4f8 0%, #e8edf3 100%);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 56px 64px;
+  background: #fff;
+  border-radius: 12px;
+  /* sombra mais rica para destacar o card no centro */
+  box-shadow: 0 8px 40px rgba(26, 58, 92, 0.12);
+  animation: subir 0.4s ease;
+  border-top: 4px solid #1a3a5c;
+}
+
+@keyframes subir {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* spinner circular animado — feito só com CSS, sem biblioteca */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #d0dce8;
+  border-top-color: #1a3a5c;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+.titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a3a5c;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 0.87rem;
+  color: #96a3b4;
+  /* pontos pulsantes dão sensação de atividade */
+  animation: pulsar 1.4s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+/* mobile: diminui o padding para não ultrapassar a tela */
+@media (max-width: 480px) {
+  .card {
+    padding: 40px 32px;
+    width: calc(100% - 40px);
+    max-width: 360px;
+  }
+}
