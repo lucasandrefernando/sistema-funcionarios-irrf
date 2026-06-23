@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "nome": "Carlos Mendes",
+    "cpf": "123.456.789-00",
+    "salarioBruto": 2500.00,
+    "descontoPrevidencia": 275.00,
+    "numeroDependentes": 1,
+    "salarioBaseIR": 2035.41,
+    "descontoIRRF": 0.00
+  },
+  {
+    "id": "2",
+    "nome": "Fernanda Lima",
+    "cpf": "234.567.890-11",
+    "salarioBruto": 3000.00,
+    "descontoPrevidencia": 330.00,
+    "numeroDependentes": 0,
+    "salarioBaseIR": 2670.00,
+    "descontoIRRF": 30.81
+  },
+  {
+    "id": "3",
+    "nome": "Roberto Souza",
+    "cpf": "345.678.901-22",
+    "salarioBruto": 4000.00,
+    "descontoPrevidencia": 440.00,
+    "numeroDependentes": 1,
+    "salarioBaseIR": 3370.41,
+    "descontoIRRF": 124.12
+  },
+  {
+    "id": "4",
+    "nome": "Patricia Alves",
+    "cpf": "456.789.012-33",
+    "salarioBruto": 5000.00,
+    "descontoPrevidencia": 550.00,
+    "numeroDependentes": 0,
+    "salarioBaseIR": 4450.00,
+    "descontoIRRF": 338.48
+  },
+  {
+    "id": "5",
+    "nome": "Marcelo Santos",
+    "cpf": "567.890.123-44",
+    "salarioBruto": 8000.00,
+    "descontoPrevidencia": 880.00,
+    "numeroDependentes": 2,
+    "salarioBaseIR": 6740.82,
+    "descontoIRRF": 957.73
+  }
+]
