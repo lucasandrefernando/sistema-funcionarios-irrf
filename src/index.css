@@ -1,0 +1,22 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+  /* suaviza o texto em telas de alta resolução */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* scrollbar mais fina e discreta — melhora o visual nos navegadores modernos */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f0f4f8; }
+::-webkit-scrollbar-thumb { background: #b0c4d8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1a3a5c; }
